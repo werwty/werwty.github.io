@@ -1,0 +1,38 @@
+<html>
+<head>
+<style type="text/css">
+body {
+background-color: #A30000;
+color: #000;
+font-size:5em;
+font-family:overpass,arial,helvetica;
+text-align: center;
+}
+#main {
+margin: 0px auto;
+margin-top: 150px;
+width: 350px;
+text-align:center;
+}
+</style>
+<title>Is RedHat IBM?</title>
+</head>
+<body>
+<div id="main">
+<script type="text/javascript">
+    fetch('https://www.redhat.com', {
+        mode: "no-cors"
+    })
+  .then(function(response) {
+    if(response.redirected){
+        document.getElementById('main').innerHTML ="YUP.";
+    }
+    else{
+        document.getElementById('main').innerHTML ="NOPE.";
+    }
+  })
+</script>
+
+</div>
+</body>
+</html>
